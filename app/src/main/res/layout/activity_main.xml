@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE androidx.constraintlayout.widget.ConstraintLayout >
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddd"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/calc_result"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="#ccc"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center|right"
+        android:text="3 x 4"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/calc_content"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:background="#ccc"
+        android:gravity="center|right"
+        android:text="12"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calc_result" />
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/imageButton"-->
+    <!--        android:layout_width="75dp"-->
+    <!--        android:layout_height="75dp"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:background="#fff"-->
+    <!--        android:src="@drawable/ic_baseline_add_24"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/calc_content"-->
+    <!--        tools:ignore="SpeakableTextPresentCheck" />-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calc_content">
+
+
+        <Button
+            android:id="@+id/btn_ce"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_operator"
+            android:fontFamily="sans-serif-light"
+            android:text="CE"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/btn_c"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_operator"
+            android:fontFamily="sans-serif-light"
+            android:text="C"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@id/btn_ce"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <ImageButton
+            android:id="@+id/btn_del"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_operator"
+            android:src="@drawable/ic_baseline_backspace_24"
+            android:text="X"
+            android:textColor="#000"
+            app:tint="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@id/btn_c"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn_divide"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_operator"
+            android:text="/"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@id/btn_del"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/btn_seven"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_calc"
+            android:text="7"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_ce"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/btn_eight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_calc"
+            android:text="8"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@id/btn_seven"
+            app:layout_constraintTop_toBottomOf="@id/btn_c"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/btn_nine"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_calc"
+            android:text="9"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@id/btn_eight"
+            app:layout_constraintTop_toBottomOf="@id/btn_del"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <ImageButton
+            android:id="@+id/btn_mul"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_operator"
+            android:src="@drawable/ic_baseline_mul_24"
+            android:textColor="#000"
+            app:tint="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@id/btn_nine"
+            app:layout_constraintTop_toBottomOf="@id/btn_divide"
+            app:layout_constraintWidth_percent="0.25"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn_four"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_calc"
+            android:text="4"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_seven"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/btn_five"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_calc"
+            android:text="5"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@id/btn_four"
+            app:layout_constraintTop_toBottomOf="@id/btn_eight"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/btn_six"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_calc"
+            android:text="6"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@id/btn_five"
+            app:layout_constraintTop_toBottomOf="@id/btn_nine"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <ImageButton
+            android:id="@+id/btn_minus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_operator"
+            android:src="@drawable/ic_baseline_remove_24"
+            android:text="-"
+            app:tint="#000"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@id/btn_six"
+            app:layout_constraintTop_toBottomOf="@id/btn_mul"
+            app:layout_constraintWidth_percent="0.25"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn_one"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_calc"
+            android:text="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_four"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/btn_second"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_calc"
+            android:text="2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@id/btn_one"
+            app:layout_constraintTop_toBottomOf="@id/btn_five"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/btn_three"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_calc"
+            android:text="3"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@+id/btn_second"
+            app:layout_constraintTop_toBottomOf="@id/btn_six"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <ImageButton
+            android:id="@+id/btn_add"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_operator"
+            android:src="@drawable/ic_baseline_add_24"
+            android:text="+"
+            app:tint="#000"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@+id/btn_three"
+            app:layout_constraintTop_toBottomOf="@id/btn_minus"
+            app:layout_constraintWidth_percent="0.25"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn_negative"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_calc"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_one"
+            app:layout_constraintWidth_percent="0.25"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn_zero"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_calc"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@+id/btn_negative"
+            app:layout_constraintTop_toBottomOf="@+id/btn_second"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/btn_dot"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_calc"
+            android:text="."
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@+id/btn_zero"
+            app:layout_constraintTop_toBottomOf="@+id/btn_three"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <ImageButton
+            android:id="@+id/btn_res"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_operator"
+            android:src="@drawable/ic_baseline_drag_handle_24"
+            android:text="="
+            app:tint="#000"
+            android:textColor="#000"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@+id/btn_dot"
+            app:layout_constraintTop_toBottomOf="@+id/btn_add"
+            app:layout_constraintWidth_percent="0.25"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
