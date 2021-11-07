@@ -14,7 +14,6 @@
         android:background="#ccc"
         android:fontFamily="sans-serif-light"
         android:gravity="center|right"
-        android:text="3 x 4"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +26,6 @@
         android:layout_height="90dp"
         android:background="#ccc"
         android:gravity="center|right"
-        android:text="12"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="#000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -231,7 +229,7 @@
             app:layout_constraintWidth_percent="0.25" />
 
         <Button
-            android:id="@+id/btn_second"
+            android:id="@+id/btn_two"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/btn_calc"
@@ -252,7 +250,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:textColor="#000"
             app:layout_constraintHeight_percent="0.2"
-            app:layout_constraintStart_toEndOf="@+id/btn_second"
+            app:layout_constraintStart_toEndOf="@+id/btn_two"
             app:layout_constraintTop_toBottomOf="@id/btn_six"
             app:layout_constraintWidth_percent="0.25" />
 
@@ -293,7 +291,7 @@
             android:textColor="#000"
             app:layout_constraintHeight_percent="0.2"
             app:layout_constraintStart_toEndOf="@+id/btn_negative"
-            app:layout_constraintTop_toBottomOf="@+id/btn_second"
+            app:layout_constraintTop_toBottomOf="@+id/btn_two"
             app:layout_constraintWidth_percent="0.25" />
 
         <Button
